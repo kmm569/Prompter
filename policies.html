@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Policies — Discord Bot</title>
+	<style>
+		:root {
+			--bg: #0f1115;
+			--card: #151821;
+			--text: #e8ebf0;
+			--muted: #a9b0bd;
+			--accent: #7aa2f7;
+			--border: #212636;
+		}
+		html, body {
+			height: 100%;
+			background: var(--bg);
+			color: var(--text);
+			font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+			margin: 0;
+		}
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 2.5rem 1.25rem 4rem;
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			position: sticky;
+			top: 0;
+			background: linear-gradient(180deg, rgba(15,17,21,0.9), rgba(15,17,21,0.75) 60%, rgba(15,17,21,0));
+			backdrop-filter: blur(8px);
+			border-bottom: 1px solid var(--border);
+			padding: 0.75rem 1.25rem;
+			z-index: 10;
+		}
+		.brand {
+			font-weight: 700;
+			letter-spacing: 0.2px;
+		}
+		nav a {
+			display: inline-block;
+			padding: 0.5rem 0.75rem;
+			margin: 0 0.125rem;
+			color: var(--muted);
+			text-decoration: none;
+			border: 1px solid transparent;
+			border-radius: 10px;
+			transition: 150ms ease;
+		}
+		nav a.active, nav a:hover {
+			color: var(--text);
+			border-color: var(--border);
+			background: #0c0e13;
+		}
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 16px;
+			padding: 1.25rem;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+		}
+		h1 {
+			font-size: clamp(1.5rem, 2vw, 2rem);
+			margin: 0.25rem 0 0.75rem;
+		}
+		h2 {
+			font-size: 1.1rem;
+			margin: 1.25rem 0 0.25rem;
+		}
+		p, li { color: var(--muted); }
+		.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+		.badge {
+			display: inline-block;
+			font-size: 0.75rem;
+			padding: 0.15rem 0.5rem;
+			border-radius: 999px;
+			border: 1px solid var(--border);
+			color: var(--muted);
+			margin-left: 0.5rem;
+		}
+		.footer {
+			margin-top: 2rem;
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+		.section { display: none; }
+		.section.active { display: block; }
+		.kicker { color: var(--accent); font-weight: 600; letter-spacing: 0.2px; }
+		ul { padding-left: 1.25rem; }
+		code { background: #0c0e13; border: 1px solid var(--border); padding: 0.1rem 0.35rem; border-radius: 6px; }
+		.small { font-size: 0.95rem; }
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="brand">Discord Bot Policies</div>
+		<nav>
+			<a id="link-terms" href="#terms">Terms of Service</a>
+			<a id="link-privacy" href="#privacy">Privacy Policy</a>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section id="terms" class="section active">
+			<div class="card">
+				<div class="kicker">Last updated August 26, 2025</div>
+				<h1>Terms of Service <span class="badge">for the Discord bot (“the Service”)</span></h1>
+				<h2>1) Agreement</h2>
+				<p>By adding or using the Service in your Discord server or account, you agree to these Terms. If you don’t accept them, remove the bot from your server and stop using it.</p>
+				<h2>2) Access & Requirements</h2>
+				<ul>
+					<li>You must comply with <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord’s Terms</a> and <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Community Guidelines</a>.</li>
+					<li>The bot requires certain permissions (e.g., reading messages for triggers, responding in channels, and using application commands). Server admins are responsible for granting appropriate permissions.</li>
+				</ul>
+				<h2>3) Acceptable Use</h2>
+				<ul>
+					<li>No abuse, harassment, hate, doxxing, spam, or illegal use.</li>
+					<li>Don’t attempt to break, reverse‑engineer, or overload the Service.</li>
+					<li>Follow rate limits and don’t automate misuse.</li>
+				</ul>
+				<h2>4) Bot Behavior & Content</h2>
+				<ul>
+					<li>The Service can read message content (with the “Message Content Intent”) to detect sprint prompts and similar triggers, and can respond in channels.</li>
+					<li>Slash command inputs you provide (e.g., genre/plot/theme) may be sent to an AI provider to generate responses. See the Privacy Policy for details.</li>
+					<li>Output content is provided “as‑is.” You’re responsible for moderating content in your own server.</li>
+				</ul>
+				<h2>5) Availability & Changes</h2>
+				<ul>
+					<li>We may update, pause, or discontinue the Service at any time.</li>
+					<li>We may change these Terms. Continued use means you accept any updated Terms.</li>
+				</ul>
+				<h2>6) Termination</h2>
+				<p>We may restrict or terminate access at our discretion for any reason, including violations of these Terms. You may stop using the Service at any time by removing it from your server.</p>
+				<h2>7) Disclaimers</h2>
+				<p>The Service is provided “as‑is” and “as available” without warranties of any kind, express or implied. We do not warrant that the Service will be uninterrupted, secure, or error‑free.</p>
+				<h2>8) Limitation of Liability</h2>
+				<p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, or exemplary damages arising from or related to your use of the Service.</p>
+				<h2>9) Governing Law</h2>
+				<p>These Terms are governed by the laws of New York, USA, without regard to conflict‑of‑laws rules.</p>
+				<h2>10) Contact</h2>
+				<p class="small">Questions or issues? Email <a href="mailto:replace-me@example.com">replace-me@example.com</a> or open an issue on the GitHub repo that hosts this site.</p>
+				<p class="small"><em>Note:</em> This template is provided for convenience and is not legal advice.</p>
+			</div>
+		</section>
+
+		<section id="privacy" class="section">
+			<div class="card">
+				<div class="kicker">Last updated August 26, 2025</div>
+				<h1>Privacy Policy <span class="badge">for the Discord bot (“the Service”)</span></h1>
+				<h2>Overview</h2>
+				<p>This policy explains what the bot processes and stores, and how data is used. The bot operates inside Discord and relies on Discord’s APIs. By using the bot, you consent to this policy.</p>
+				<h2>What We Process</h2>
+				<ul>
+					<li><strong>Message Content (in‑memory):</strong> The bot uses the <span class="mono">Message Content Intent</span> to read messages in the servers where it’s installed to detect specific triggers (e.g., “JOIN THE SPRINT…” headers). This content is inspected in‑memory to respond; it is not persisted by default.</li>
+					<li><strong>Slash Command Inputs:</strong> When you run commands (e.g., <span class="mono">/prompt</span>), the parameters you provide (genre, length, theme, plot) are processed to fulfill the request and may be sent to an AI provider to generate a response.</li>
+					<li><strong>Server Configuration Data:</strong> The bot stores minimal server-level configuration so it can function:
+						<ul>
+							<li>Server (guild) ID</li>
+							<li>Channel IDs (for allowlists/target channels)</li>
+							<li>Role IDs (e.g., staff roles)</li>
+							<li><em>Optional</em> User IDs (if you enable user allowlists)</li>
+						</ul>
+						This configuration is stored in local JSON on the host (e.g., <span class="mono">json/serverSettings/settings.json</span>).</li>
+					<li><strong>Prompt Cache:</strong> The bot can cache non‑personal prompt text per server to reuse later (e.g., <span class="mono">json/promptCache/generatedPrompts.json</span> and <span class="mono">json/promptCache/writing_prompts.json</span>). These files hold prompt strings and a mapping keyed by guild ID.</li>
+				</ul>
+				<h2>How We Use Data</h2>
+				<ul>
+					<li>Operate core features (respond to triggers, run slash commands, enforce allowlists).</li>
+					<li>Generate writing prompts and related content.</li>
+					<li>Maintain basic server‑level settings so your configuration persists across restarts.</li>
+				</ul>
+				<h2>Where Data Lives</h2>
+				<ul>
+					<li><strong>Locally on the bot host:</strong> JSON files within the bot’s <span class="mono">/json</span> directories.</li>
+					<li><strong>Discord:</strong> Messages, interactions, and metadata handled under Discord’s own terms and policies.</li>
+					<li><strong>AI Provider (OpenAI):</strong> We send the text you provide in commands (and system instructions) to OpenAI’s API to generate prompts. See OpenAI’s policies for how they handle API data.</li>
+				</ul>
+				<h2>Retention</h2>
+				<ul>
+					<li>Server configuration and cached prompts remain until the server owner/admin deletes or resets them, or we prune them during maintenance.</li>
+					<li>We do not intentionally store raw message histories; trigger matching is performed in‑memory only.</li>
+				</ul>
+				<h2>Sharing</h2>
+				<ul>
+					<li>We do not sell your data.</li>
+					<li>We share command text with our AI provider (OpenAI) strictly to generate the requested output.</li>
+				</ul>
+				<h2>Security</h2>
+				<p>We take reasonable steps to protect stored configuration (e.g., limiting access to the host). No method is 100% secure. Keep your Discord server permissions tight and your bot token/API keys secret.</p>
+				<h2>Your Choices & Rights</h2>
+				<ul>
+					<li>Remove the bot from your server to stop all further processing.</li>
+					<li>Ask us to delete your server’s stored configuration/cache. We’ll remove the relevant JSON entries and files where feasible.</li>
+				</ul>
+				<h2>International Users</h2>
+				<p>The bot is operated in the United States. If you access it from other regions, you consent to processing and storage in the U.S.</p>
+				<h2>Children</h2>
+				<p>The Service is for users 13+ (or the minimum age required by Discord in your region). We do not knowingly collect personal data from children under that minimum.</p>
+				<h2>Contact</h2>
+				<p class="small">For privacy requests, email <a href="mailto:replace-me@example.com">replace-me@example.com</a> with your server ID and proof you’re an admin. We’ll verify and handle your request.</p>
+			</div>
+		</section>
+
+		<p class="footer">You can deep‑link these sections directly for Discord’s developer portal: <code>/policies.html#terms</code> and <code>/policies.html#privacy</code>.</p>
+	</main>
+
+	<script>
+		function setActive(hash) {
+			const id = (hash || '#terms').replace('#','');
+			for (const sec of document.querySelectorAll('.section')) {
+				sec.classList.remove('active');
+			}
+			for (const link of document.querySelectorAll('nav a')) {
+				link.classList.remove('active');
+			}
+			document.getElementById(id)?.classList.add('active');
+			document.getElementById('link-' + id)?.classList.add('active');
+		}
+		window.addEventListener('hashchange', () => setActive(location.hash));
+		window.addEventListener('DOMContentLoaded', () => setActive(location.hash));
+	</script>
+</body>
+</html>
